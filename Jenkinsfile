@@ -2,7 +2,7 @@ pipeline {
     agent any
     
     tools {
-        maven 'localMaven'
+        maven 'Puszek'
     }
     
     stages {
@@ -39,7 +39,7 @@ pipeline {
             environment {
                 SCANNER_HOME = tool 'sonarqube'
                 ORGANIZATION = "EQL"
-                PROJECT_NAME = "my_boot_01"
+                PROJECT_NAME = "my_01_boot"
             }
             steps {
                 withSonarQubeEnv('sonarqube') {
